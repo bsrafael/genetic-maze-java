@@ -6,7 +6,6 @@ public class Algoritmo {
     private static double taxaDeCrossover;
     private static double taxaDeMutacao;
     private static String caracteres;
-    private static Maze maze = new Maze();
 
     public static Populacao novaGeracao(Populacao populacao, boolean elitismo) {
         Random r = new Random();

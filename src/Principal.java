@@ -59,7 +59,6 @@ public class Principal {
     String output = "";
 
     String[] geneBits = genes.split("(?<=\\G.{2})");
-    String[] directions = new String[geneBits.length];
 
     for (int i = 0; i < geneBits.length; i++) {
       if (geneBits[i].compareTo("00") == 0) output += "-> ";
