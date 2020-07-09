@@ -1,4 +1,4 @@
-#  
+#  Genetic Algorithm maze solver using Java 
 
 Classroom project for an Artifial Intelligence class at University of Caxias do Sul, Brazil
 
