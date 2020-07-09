@@ -3,6 +3,12 @@ public class Principal {
 
   public static void main(String[] args) {
 
+    /**
+     * Deve usar a solução pré-definida? Foi apresentado considerando
+     * a solução fixa, mas é possível deixar sem
+     */
+    Algoritmo.setUsePredefinedSolution(true);
+
     // Define a solução
     Algoritmo.setSolucao("000001010100");
     // Define os caracteres existentes
@@ -37,8 +43,8 @@ public class Principal {
       // cria nova populacao
       populacao = Algoritmo.novaGeracao(populacao, eltismo);
 
-      System.out.println("Geração " + geracao + " | Aptidão: " + populacao.getIndividuo(0).getAptidao() + " | Melhor: \t"
-          + printDirections(populacao.getIndividuo(0).getGenes()));
+      System.out.println("Geração " + geracao + " | Aptidão: " + populacao.getIndividuo(0).getAptidao()
+          + " | Melhor: \t" + printDirections(populacao.getIndividuo(0).getGenes()));
 
       // verifica se tem a solucao
       temSolucao = populacao.temSolucao(Algoritmo.getSolucao());
@@ -61,10 +67,14 @@ public class Principal {
     String[] geneBits = genes.split("(?<=\\G.{2})");
 
     for (int i = 0; i < geneBits.length; i++) {
-      if (geneBits[i].compareTo("00") == 0) output += "-> ";
-      if (geneBits[i].compareTo("01") == 0) output += "/\\ ";
-      if (geneBits[i].compareTo("10") == 0) output += "<- ";
-      if (geneBits[i].compareTo("11") == 0) output += "\\/ ";
+      if (geneBits[i].compareTo("00") == 0)
+        output += "-> ";
+      if (geneBits[i].compareTo("01") == 0)
+        output += "/\\ ";
+      if (geneBits[i].compareTo("10") == 0)
+        output += "<- ";
+      if (geneBits[i].compareTo("11") == 0)
+        output += "\\/ ";
     }
 
     return output;
